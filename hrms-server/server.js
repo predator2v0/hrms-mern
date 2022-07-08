@@ -1,11 +1,19 @@
 const express = require("express");
+require("dotenv").config();
+const authRouter = require("./routes/auth");
 
-const app = express();
+const app = express(); // express app.
+const db = require("./config/dbConn"); // DB connection
 
+// middleware
+app.use(express.json());
+app.use(authRouter);
+
+// test router
 app.get("/", (req, res) => {
-    res.send("Welcome to hrms server!");
+    res.send(`server is running on port ${process.env.PORT}`);
 });
-const PORT = 5500;
-app.listen(process.env.PORT || 6699, () => {
-    console.log("listening on port " + PORT);
+// server listening on port 9876
+app.listen(process.env.PORT, () => {
+    console.log(`listening on port ${process.env.PORT}`);
 });
