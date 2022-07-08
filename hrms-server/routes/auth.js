@@ -27,4 +27,27 @@ router.post("/register", async (req, res) => {
     }
 });
 
+// login router
+router.post("/login", async (req, res) => {
+    try{
+        const { email, password } = req.body;
+    if (!email || !password) {
+        res.status(400).json({ msg: "fill all the fields" });
+    }
+    const userExists = await user.findOne({ email: email });
+    if (
+        userExists &&
+        userExists.email === email &&
+        userExists.password === password
+    ) {
+        res.status(200).json({ msg: "user login successful" });
+    } else {
+        res.status(400).json({ msg: "invalid credentials" });
+    }
+    } catch(err){
+        console.log(err);
+        res.status(400).json({msg: 'unable to login. some error occurred'})
+    }
+});
+
 module.exports = router;
