@@ -1,6 +1,6 @@
 const Home = () => {
     return (
-        <div>
+        <div className="component-shadow home-component">
             this is home comp.
         </div>
     );
