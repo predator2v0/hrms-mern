@@ -1,6 +1,6 @@
 import "../assets/css/home.css";
 
-import Search from "./subomponents/Search";
+import Search from "./subcomponents/Search";
 
 const Home = () => {
     return (

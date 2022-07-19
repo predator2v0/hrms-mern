@@ -1,5 +1,5 @@
 import "../assets/css/footer.css";
-import Contactform from "./subomponents/Contactform";
+import Contactform from "./subcomponents/Contactform";
 const Footer = () => {
     return (
         <div className='footer'>
