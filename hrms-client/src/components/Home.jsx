@@ -1,7 +1,11 @@
+import "../assets/css/home.css";
+
+import Search from "./subcomponents/Search";
+
 const Home = () => {
     return (
-        <div className="component-shadow home-component">
-            this is home comp.
+        <div className='home-component'>
+            <Search />
         </div>
     );
 };

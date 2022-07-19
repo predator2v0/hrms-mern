@@ -5,24 +5,16 @@
     font-family: "Roboto", sans-serif;
 }
 .component-shadow {
-    background-color: #fdfdfd;
-    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
-    /* -webkit-box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.75); */
+    background-color: #ffffff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.home-component {
-    width: 100%;
-    height: 400px;
-    margin-top: 20px;
-}
+
 /* navbar */
 .primary-navbar {
-    background-color: #cdf0ea !important;
+    background-color: #92b4ec !important;
 }
-.dropdown-nav {
-    position: absolute;
-    background-color: #cabb;
-    padding: 10px;
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
 }
-/* footer */
 

@@ -1,0 +1,25 @@
+.login{
+    width: 100%;
+    min-height: 70vh;
+    margin: 5rem auto;
+    display: flex;
+}
+.login-container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    margin: auto;
+}
+.login-image{
+    width: 430px;
+}
+.login-form-container{
+    padding: 1rem 4rem;
+}
+.login-form ::placeholder{
+    opacity: 0.4;
+}
+.login-btn{
+    background-color: #92B4EC;
+}

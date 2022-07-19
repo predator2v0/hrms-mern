@@ -1,12 +1,13 @@
-import React from "react";
 import "../assets/css/footer.css";
+import Contactform from "./subcomponents/Contactform";
 const Footer = () => {
     return (
         <div className='footer'>
             <div className='footer-container container'>
                 <div className='contact-info'>
+                    <h5 className='footer-heading'>Contact Info</h5>
                     <div className='email-info'>
-                        <i class='bi bi-envelope'></i>{" "}
+                        <i class='bi bi-envelope'></i>
                         <p>info.customcastle@gmail.com</p>
                     </div>
                     <div className='address-info'>
@@ -16,52 +17,27 @@ const Footer = () => {
                             dhenkanal, Odisha, India <br /> PIN: 759014
                         </p>
                     </div>
-                    <div className='social-icons'>
-                        <i class='bi bi-twitter'></i>
-                        <i class='bi bi-facebook'></i>
-                        <i class='bi bi-instagram'></i>
-                        <i class='bi bi-youtube'></i>
+                    <div className='phone-info'>
+                        <i class='bi bi-telephone-inbound'></i>
+                        <p>
+                            +91 1234-567-890, <br /> +91 9876-543-210
+                        </p>
                     </div>
                 </div>
                 <div className='quick-links'>
+                    <h5 className='footer-heading'>Quick Links</h5>
                     <ul>
-                        <li>some data</li>
-                        <li>some more data</li>
-                        <li>even more data</li>
-                        <li>more and more data</li>
-                        <li>data</li>
+                        <li>About Us</li>
+                        <li>FAQs</li>
+                        <li>Site Map</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms of Service</li>
                     </ul>
                 </div>
-                <div className='contact-form'>
-                    <form action='/contactus'>
-                        <div className='form-group'>
-                            <input
-                                type='text'
-                                className='form-control'
-                                id='name'
-                                placeholder='name'
-                            />
-                        </div>
-                        <div className='form-group'>
-                            <input
-                                type='text'
-                                className='form-control'
-                                id='email'
-                                placeholder='email'
-                            />
-                        </div>
-                        <div className='form-group'>
-                            <textarea
-                                className='form-control'
-                                id='email'
-                                placeholder='message'
-                            ></textarea>
-                        </div>
-                        <div className='form-group'>
-                            <input type='submit' className='btn submit-btn' />
-                        </div>
-                    </form>
-                </div>
+                <Contactform />
+            </div>
+            <div className='container text-white'>
+                <p className='m-0 p-0'>&copy;2022, all rights reserved</p>
             </div>
         </div>
     );
