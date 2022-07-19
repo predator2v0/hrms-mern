@@ -1,9 +1,7 @@
 .footer {
     width: 100%;
     height: auto;
-    position: fixed;
-    bottom: 0;
-    background-color: #cdf0ea;
+    background-color: #92b4ec;
     padding: 10px;
 }
 .footer-container {
@@ -16,19 +14,20 @@
     padding: 5px;
 }
 .email-info,
-.address-info {
+.address-info,
+.phone-info {
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
-.social-icons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    text-align: center;
-    font-size: 1.2rem;
+.footer-heading{
+    color: #ffffff;
 }
-textarea{
+.quick-links ul{
+    list-style-type: none;
+}
+textarea {
     resize: none;
 }
-.submit-btn{
-    background-color: #a1eafb ;
+.submit-btn {
+    background-color: #ffffff;
 }
