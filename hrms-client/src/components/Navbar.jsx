@@ -5,9 +5,9 @@ const Navbar = () => {
         <>
             <nav className='navbar navbar-expand-lg navbar-light bg-transparent primary-navbar shadow-sm'>
                 <div className='container-fluid'>
-                    <a className='navbar-brand font-weight-bold' href='/'>
-                        CustomCastle
-                    </a>
+                    <Link className='navbar-brand' to='/'>
+                       CC
+                    </Link>
                     <button
                         className='navbar-toggler'
                         type='button'
