@@ -1,0 +1,22 @@
+.register {
+    width: 100%;
+    min-height: 60vh;
+    margin: 5rem auto;
+    display: flex;
+}
+.register-container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    margin: auto;
+}
+.register-form-container{
+    padding:1rem 4rem
+}
+.register-image{
+    width: 430px;
+}
+.signup-btn{
+    background-color: #92B4EC;
+}
