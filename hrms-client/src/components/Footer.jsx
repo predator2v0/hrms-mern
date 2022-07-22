@@ -7,18 +7,18 @@ const Footer = () => {
                 <div className='contact-info'>
                     <h5 className='footer-heading'>Contact Info</h5>
                     <div className='email-info'>
-                        <i class='bi bi-envelope'></i>
+                        <i className='bi bi-envelope'></i>
                         <p>info.customcastle@gmail.com</p>
                     </div>
                     <div className='address-info'>
-                        <i class='bi bi-geo-alt'></i>
+                        <i className='bi bi-geo-alt'></i>
                         <p>
                             13A, 13C, tech park (19th floor), <br /> Dhenkanal,
                             dhenkanal, Odisha, India <br /> PIN: 759014
                         </p>
                     </div>
                     <div className='phone-info'>
-                        <i class='bi bi-telephone-inbound'></i>
+                        <i className='bi bi-telephone-inbound'></i>
                         <p>
                             +91 1234-567-890, <br /> +91 9876-543-210
                         </p>
