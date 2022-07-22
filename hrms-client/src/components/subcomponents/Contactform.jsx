@@ -24,13 +24,12 @@ const Contactform = () => {
                 }
             );
             if (feedbackSent) {
-                window.alert("message sent successfully.");
+                window.alert(feedbackSent.data.message);
                 setFeedback({ name: "", email: "", message: "" });
-            } else {
-                window.alert("unable to send your message");
             }
         } catch (err) {
-            console.log("hello", err);
+            window.alert(err.response.data.message);
+            console.log("error in storing response " + err);
         }
     };
     return (

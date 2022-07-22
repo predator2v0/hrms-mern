@@ -4,7 +4,10 @@ const contact = require("../models/contact");
 
 contactRouter.post("/contactus", async (req, res) => {
     try {
-        const { name, email, message } = req.body;
+        let { name, email, message } = req.body;
+        name = name.trim();
+        email = email.trim();
+        message = message.trim();
         if (!name || !email || !message) {
             res.status(400).json({ message: "please fill all the data" });
         }
