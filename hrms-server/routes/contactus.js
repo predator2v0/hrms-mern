@@ -9,7 +9,7 @@ contactRouter.post("/contactus", async (req, res) => {
         email = email.trim();
         message = message.trim();
         if (!name || !email || !message) {
-            res.status(400).json({ message: "please fill all the data" });
+            res.status(400).json({ msg: "please fill all the data" });
         }
         const newMessage = new contact({
             name,
@@ -20,11 +20,11 @@ contactRouter.post("/contactus", async (req, res) => {
         const messageSaved = await contact.create(newMessage);
         if (messageSaved) {
             res.status(201).json({
-                message: "message saved successfully.",
+                msg: "message saved successfully.",
             });
         } else {
             res.status(500).json({
-                message: "unable to save the message. server error",
+                msg: "unable to save the message. server error",
             });
         }
     } catch (err) {

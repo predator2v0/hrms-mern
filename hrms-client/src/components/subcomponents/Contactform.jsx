@@ -24,11 +24,11 @@ const Contactform = () => {
                 }
             );
             if (feedbackSent) {
-                window.alert(feedbackSent.data.message);
+                window.alert(feedbackSent.data.msg);
                 setFeedback({ name: "", email: "", message: "" });
             }
         } catch (err) {
-            window.alert(err.response.data.message);
+            window.alert(err.response.data.msg);
             console.log("error in storing response " + err);
         }
     };
