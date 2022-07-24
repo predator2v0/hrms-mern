@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import "../assets/css/register.css";
 import registerImage from "../assets/img/register.svg";
 const Register = () => {
+    // TODO: implement client side validation for the registration form.
+    let navigate = useNavigate();
     const [user, setUser] = useState({
         name: "",
         email: "",
@@ -12,12 +14,14 @@ const Register = () => {
         password: "",
         cpassword: "",
     });
+    // handle the onChange event for the form inputs. stores the values of form input in the state variable.
     const handleChange = (e) => {
         let key = e.target.name;
         let value = e.target.value;
 
         setUser({ ...user, [key]: value });
     };
+    // handle the click for submit button. sends the data to server.
     const registerUser = async (e) => {
         e.preventDefault();
         try {
@@ -28,7 +32,6 @@ const Register = () => {
                     "Content-type": "application/json",
                 }
             );
-            console.log(userRegistered);
             if (userRegistered) {
                 window.alert(userRegistered.data.msg);
                 setUser({
@@ -38,10 +41,11 @@ const Register = () => {
                     password: "",
                     cpassword: "",
                 });
+                navigate("/login"); // redirecting to login page after successful registration.
             }
         } catch (err) {
-            // window.alert(err.response.data.message);
-            console.log(err);
+            console.log(err.response.data.msg);
+            window.alert(err.response.data.msg);
         }
     };
     return (
