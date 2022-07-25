@@ -4,6 +4,7 @@
     margin: 5rem auto;
     padding-top: 7%;
 }
+/* search component */
 .search-component {
     margin: auto;
     width: 55%;
@@ -29,4 +30,35 @@
     text-align: center;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+}
+/* property type component */
+.property-type-component{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10px;
+    margin-top: 100px;
+}
+.property-type{
+    margin: 0 10px;
+    text-align: center;
+    position: relative;
+}
+.property-type img{
+    width: 190px;
+    height: auto;
+}
+.property-type-caption{
+    position: absolute;
+    color: #FFE69A ;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.property-type:hover .property-type-caption{
+    display: block;
+    text-align: center;
+}
+.property-type:hover img{
+    filter: blur(2px);
 }
