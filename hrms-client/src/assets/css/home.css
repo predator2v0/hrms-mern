@@ -51,14 +51,16 @@
     position: absolute;
     color: #FFE69A ;
     display: none;
-    top: 50%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #92b4ec;
+    width: 100%;
 }
 .property-type:hover .property-type-caption{
     display: block;
     text-align: center;
 }
 .property-type:hover img{
-    filter: blur(2px);
+    filter: opacity(0.5);
 }
