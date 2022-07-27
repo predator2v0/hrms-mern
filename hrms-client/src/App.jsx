@@ -9,6 +9,7 @@ import About from "./components/About";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
 import Register from "./components/Register";
+import Dashboard from "./components/Dashboard";
 
 const App = () => {
     return (
@@ -20,6 +21,7 @@ const App = () => {
                     <Route path='/about' element={<About />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/register' element={<Register />} />
+                    <Route path='/dashboard' element={<Dashboard />} />
                 </Routes>
             </div>
             <Footer />
