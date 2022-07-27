@@ -29,7 +29,7 @@ const Register = () => {
                 "http://localhost:7777/register",
                 user,
                 {
-                    "Content-type": "application/json",
+                    "Content-Type": "application/json",
                 }
             );
             if (userRegistered) {

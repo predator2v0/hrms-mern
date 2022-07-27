@@ -20,7 +20,7 @@ const Contactform = () => {
                 "http://localhost:7777/contactus",
                 feedback,
                 {
-                    "Content-type": "application/json",
+                    "Content-Type": "application/json",
                 }
             );
             if (feedbackSent) {
