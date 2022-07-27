@@ -1,9 +1,35 @@
-import { Link } from "react-router-dom";
+import axios from "axios";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 import "../assets/css/login.css";
 import loginImage from "../assets/img/secure_login.svg";
 
 const Login = () => {
+    const navigate = useNavigate();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const userLogin = async (e) => {
+        e.preventDefault();
+        try {
+            const userLoggedIn = await axios.post(
+                "http://localhost:7777/login",
+                {
+                    email,
+                    password,
+                },
+                { "Content-Type": "application/json" }
+            );
+            if (userLoggedIn) {
+                window.alert(userLoggedIn.data.msg);
+                navigate("/dashboard");
+            }
+        } catch (err) {
+            console.log(err.response.data.msg);
+            window.alert(err.response.data.msg);
+        }
+    };
     return (
         <div className='login component-shadow'>
             <div className='login-container '>
@@ -16,7 +42,7 @@ const Login = () => {
                 </div>
                 <div className='login-form-container'>
                     <h3>Log In</h3>
-                    <form className='login-form'>
+                    <form method='POST' className='login-form'>
                         <div className='form-group'>
                             <label htmlFor='email'> user ID</label>
                             <input
@@ -24,6 +50,7 @@ const Login = () => {
                                 id='email'
                                 className='form-control'
                                 name='email'
+                                onChange={(e) => setEmail(e.target.value)}
                                 placeholder='example@email.com'
                             />
                         </div>
@@ -34,6 +61,7 @@ const Login = () => {
                                 id='password'
                                 className='form-control'
                                 name='password'
+                                onChange={(e) => setPassword(e.target.value)}
                                 placeholder='********'
                             />
                         </div>
@@ -44,6 +72,7 @@ const Login = () => {
                                 className='btn login-btn'
                                 name='submit'
                                 value='Log In'
+                                onClick={userLogin}
                             />
                         </div>
                     </form>
