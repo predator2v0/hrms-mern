@@ -20,7 +20,7 @@ const Footer = () => {
                     <div className='phone-info'>
                         <i className='bi bi-telephone-inbound'></i>
                         <p>
-                            +91 1234-567-890, <br /> +91 9876-543-210
+                            +91 1234-567-890 <br /> +91 9876-543-210
                         </p>
                     </div>
                 </div>
